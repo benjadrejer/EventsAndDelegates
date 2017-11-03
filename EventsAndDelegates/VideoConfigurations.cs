@@ -12,17 +12,20 @@ namespace EventsAndDelegates
 
         public static void RegionConfigurator(Video video, string[] e)
         {
-            Console.WriteLine("Configuring region to: " + e[0]);
+            video.Region = e[0];
+            Console.WriteLine("Configuring region to: " + video.Region);
         }
 
         public static void BoxColorConfigurator(Video video, string[] e)
         {
-            Console.WriteLine("Configuring Box color to: " + e[1]);
+            video.BoxColor = e[1];
+            Console.WriteLine("Configuring Box color to: " + video.BoxColor);
         }
 
         public static void DiscConfigurator(Video video, string[] e)
         {
-            Console.WriteLine("The type of disc is set to: " + e[2]);
+            video.DiscType = e[2];
+            Console.WriteLine("The type of disc is set to: " + video.DiscType);
         }
     }
 
