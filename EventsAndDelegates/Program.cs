@@ -21,9 +21,20 @@ namespace EventsAndDelegates
             var mailSender = new MailMessageSender();
             var smsSender = new SMSMessageSender();
 
-            //Subscribe to event VideoIsEncoded
-            videoEncoder.VideoIsEncoded += mailSender.OnVideoEncoded;
-            videoEncoder.VideoIsEncoded += smsSender.OnVideoEncoded;
+            Console.WriteLine("Would you like to notify subscribers? (type \"yes\")");
+            string answer = Console.ReadLine();
+
+            if(answer == "yes")
+            {
+                //Subscribe to event VideoIsEncoded
+                videoEncoder.VideoIsEncoded += mailSender.OnVideoEncoded;
+                videoEncoder.VideoIsEncoded += smsSender.OnVideoEncoded;
+            }
+            else
+            {
+                Console.WriteLine("No notifications sent.");
+            }
+
 
             //Instantiate delegate and add delegate methods to create a multicast delegate
             VideoConfigurations.VideoConfigurator handler = VideoConfigurations.RegionConfigurator;
