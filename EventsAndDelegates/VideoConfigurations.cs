@@ -8,8 +8,10 @@ namespace EventsAndDelegates
 {
     public class VideoConfigurations
     {
+        //Delegate to making calling methods to configure video easier, will be a multicast delegate.
         public delegate void VideoConfigurator(Video video, string[] e);
 
+        //Methods to configure the video
         public static void RegionConfigurator(Video video, string[] e)
         {
             video.Region = e[0];

@@ -15,6 +15,7 @@ namespace EventsAndDelegates
             if (price <= 0)
                 throw new InvalidOperationException("The price of a video cannot be 0 or below");
 
+            //If price is 30$or more, postage is free!
             if (price > 30)
             {
                 _postageCost = 0;

@@ -21,6 +21,7 @@ namespace EventsAndDelegates
             var mailSender = new MailMessageSender();
             var smsSender = new SMSMessageSender();
 
+            //Ask for input to notify subscribers
             Console.WriteLine("Would you like to notify subscribers? (type \"yes\")");
             string answer = Console.ReadLine();
 
@@ -41,7 +42,7 @@ namespace EventsAndDelegates
             handler += VideoConfigurations.BoxColorConfigurator;
             handler += VideoConfigurations.DiscConfigurator;
 
-            //Hardcoding input to delegate methods
+            //Hardcoding input to delegate methods - cause, lazy
             string[] input = { "PAL", "#232323", "Bluray" };
 
             //Call delegate
